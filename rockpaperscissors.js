@@ -77,6 +77,7 @@ function showResults (playerMove) {
 }
 
 function rock() {
+    computerPlay = possiblePlays[getRandomInt(3)]
     if (computerPlay == "scissors") {
         let playerOutput = document.getElementById("player-output")
         playerOutput.innerText = "Computer played scissors. You win!"
@@ -91,6 +92,7 @@ function rock() {
 }
 
 function paper() {
+    computerPlay = possiblePlays[getRandomInt(3)]
     if (computerPlay == "rock") {
         let playerOutput = document.getElementById("player-output")
         playerOutput.innerText = "Computer played rock. You win!"
@@ -105,6 +107,7 @@ function paper() {
 }
 
 function scissors() {
+    computerPlay = possiblePlays[getRandomInt(3)]
     if (computerPlay == "paper") {
         let playerOutput = document.getElementById("player-output")
         playerOutput.innerText = "Computer played paper. You win!"
@@ -146,7 +149,6 @@ function generateBoard() {
 }
 
 function startGame() {
-    computerPlay = possiblePlays[getRandomInt(3)]
     let startButton = document.getElementById("start-button")
     startButton.remove()
     generateBoard()
